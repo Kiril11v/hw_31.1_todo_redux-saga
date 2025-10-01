@@ -1,0 +1,29 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.img-custom {
+  max-width: 600px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.custom-list h3 {
+  margin-top: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.custom-list p {
+  margin-bottom: 1rem;
+}
+
+/* Убираем точки у списков, если вдруг есть */
+.custom-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
