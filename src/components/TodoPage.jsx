@@ -32,7 +32,8 @@ export default function TodoPage() {
   const validationSchema = Yup.object({
     task: Yup.string()
       .trim()
-      .min(5, "Мінімум 5 символів"),
+      .min(5, "Мінімум 5 символів")
+      .required("Поле обов'язкове"),
   });
 
   const startEditing = (todo) => {
