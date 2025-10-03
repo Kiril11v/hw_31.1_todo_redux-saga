@@ -38,11 +38,11 @@ function* loadTodosSaga() {
 function* addTodoSaga(action) {
   try {
     yield delay(300);
-    const newTodo = { id: Date.now(), text: action.payload, completed: false };
+    const newTodo = { id: Date.now() + Math.random(), text: action.payload, completed: false };
     yield put(addTodoSuccess(newTodo));
 
     const todos = yield select(getTodos);
-    saveToLocalStorage([...todos, newTodo]);
+    saveToLocalStorage(todos);
   } catch (e) {
     yield put(addTodoFailure("Не вдалося додати"));
   }
